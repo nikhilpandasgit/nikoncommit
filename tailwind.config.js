@@ -8,7 +8,11 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['"Bricolage Grotesque"', 'sans-serif'],
+      },
+    },
   },
   plugins: [require('@tailwindcss/typography')],
 };
