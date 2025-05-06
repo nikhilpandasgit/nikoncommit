@@ -36,7 +36,7 @@ export default function About() {
         <h2>Let's Connect</h2>
         <p>
           I'm always open to interesting conversations and collaborations. 
-          Feel free to reach out to me on Twitter or GitHub, or drop me an email at your.email@example.com.
+          Feel free to reach out to me on Twitter or GitHub, or drop me an email at <a href="mailto:nikhil.panda.devs@gmail.com">nikhil.panda.devs@gmail.com</a>.
         </p>
       </div>
     </Layout>
