@@ -46,8 +46,8 @@ export const statusConstants = {
 
 export const currentProjects = [
   {
-    title: "Noetik - Contextual Knowledge Base",
-    description: "A structured knowledge graph system that stores conversation data and builds evolving context.",
+    title: "Noetik",
+    description: "A Contextual Knowledge Base. A structured knowledge graph system that stores conversation data and builds evolving context.",
     status: "in-progress" as const,
     technologies: ["Neo4j", "LangChain", "MCP", "TypeScript"]
   },
