@@ -3,6 +3,7 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useRouter } from 'next/router';
+import { Analytics } from "@vercel/analytics/next"
 
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -28,6 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
           </motion.div>
         </AnimatePresence>
       </div>
+      <Analytics />
     </>
   );
 }
