@@ -66,7 +66,7 @@ export default function Layout({ children, title = SITE_TITLE }: { children: Rea
       </Head>
       
       {/* Fixed the sticky header by adjusting the container structure */}
-      <div className="fixed top-0 z-50 w-full py-3">
+      <div className="fixed top-0 z-50 w-full py-3 px-3">
         <header className="max-w-6xl mx-auto rounded-2xl shadow-xl border transition-all duration-300 border-zinc-800/60 bg-zinc-900/10 backdrop-blur-md">
           <motion.div
             className="p-4 px-6 flex justify-between items-center"
@@ -174,7 +174,7 @@ export default function Layout({ children, title = SITE_TITLE }: { children: Rea
           </AnimatePresence>
         </header>
       </div>
-      <div className="flex-grow w-full max-w-5xl mx-auto">
+      <div className="flex-grow w-full max-w-5xl mx-auto px-4">
         <motion.main
           className="flex-grow py-8 mt-16 transition-all duration-300"
           initial={{ opacity: 0 }}
