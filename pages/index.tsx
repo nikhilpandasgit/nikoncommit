@@ -4,11 +4,22 @@ import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
 import { useState } from 'react';
+import StatusBadge  from '../components/StatusBadge';
+import { currentProjects } from '../lib/constants';
+
+interface Project {
+  title: string;
+  description: string;
+  status: 'completed' | 'in-progress' | 'planned' | 'paused' | 'abandoned';
+  technologies: string[];
+}
+
 
 export default function Home({ posts }: any) {
   const [searchTerm, setSearchTerm] = useState('');
-  
-  const filteredPosts = posts.filter((post: any) => 
+  const projects: Project[] = currentProjects;
+
+  const filteredPosts = posts.filter((post: any) =>
     post.frontmatter.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
     (post.frontmatter.excerpt && post.frontmatter.excerpt.toLowerCase().includes(searchTerm.toLowerCase()))
   );
@@ -16,13 +27,10 @@ export default function Home({ posts }: any) {
   return (
     <Layout title="nikoncommit | Home">
       <section className="mb-12">
-        <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-purple-400 to-pink-500 text-transparent bg-clip-text">
-          nikoncommit
-        </h1>
         <p className="text-lg text-gray-400 mb-6">// code, thoughts & a bit of mild rebellion</p>
         <p className="text-gray-300">
-          Welcome to my digital garden where I document my coding adventures, 
-          share my thoughts on tech, and occasionally rebel against conventional wisdom.
+          Welcome to my digital garden where I document my coding adventures,
+          share my thoughts on tech, and occasionally rebel against my comfortable self.
         </p>
       </section>
 
@@ -69,28 +77,27 @@ export default function Home({ posts }: any) {
       </section>
 
       <section>
-        <h2 className="text-3xl font-bold mb-6">Featured Projects</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="p-6 bg-zinc-900 rounded-xl border border-zinc-800">
-            <h3 className="text-xl font-semibold mb-2">Project Title</h3>
-            <p className="text-gray-400 mb-4">Short project description goes here</p>
+      <h2 className="text-3xl font-bold mb-6">Featured Projects</h2>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {projects.map((project, index) => (
+          <div key={index} className="p-6 bg-zinc-900 rounded-xl border border-zinc-800 relative">
+            <div className="absolute top-4 right-4">
+              <StatusBadge status={project.status} />
+            </div>
+            <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+            <p className="text-gray-400 mb-4">{project.description}</p>
             <div className="flex flex-wrap gap-2">
-              <span className="text-xs px-2 py-1 bg-zinc-800 rounded-full">React</span>
-              <span className="text-xs px-2 py-1 bg-zinc-800 rounded-full">Next.js</span>
-              <span className="text-xs px-2 py-1 bg-zinc-800 rounded-full">Tailwind</span>
+              {project.technologies.map((tech, techIndex) => (
+                <span key={techIndex} className="text-xs px-2 py-1 bg-zinc-800 rounded-full">
+                  {tech}
+                </span>
+              ))}
             </div>
           </div>
-          <div className="p-6 bg-zinc-900 rounded-xl border border-zinc-800">
-            <h3 className="text-xl font-semibold mb-2">Another Project</h3>
-            <p className="text-gray-400 mb-4">Short project description goes here</p>
-            <div className="flex flex-wrap gap-2">
-              <span className="text-xs px-2 py-1 bg-zinc-800 rounded-full">TypeScript</span>
-              <span className="text-xs px-2 py-1 bg-zinc-800 rounded-full">Node.js</span>
-              <span className="text-xs px-2 py-1 bg-zinc-800 rounded-full">MongoDB</span>
-            </div>
-          </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </section>
+
     </Layout>
   );
 }

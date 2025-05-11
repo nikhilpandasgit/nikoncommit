@@ -6,6 +6,11 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
     './posts/**/*.{js,ts,jsx,tsx,mdx}'
   ],
+  safelist: [
+    'bg-green-600', 'bg-blue-600', 'bg-yellow-600',
+    'bg-gray-500', 'bg-red-600',
+    'text-white', 'text-black'
+  ],
   darkMode: 'class',
   theme: {
     extend: {
