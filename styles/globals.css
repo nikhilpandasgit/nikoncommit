@@ -7,3 +7,27 @@
 body {
   @apply font-sans bg-zinc-950 text-white antialiased;
 }
+
+@layer base {
+  body {
+    @apply bg-zinc-950 text-white;
+  }
+  
+  ::selection {
+    @apply bg-purple-500 text-white;
+  }
+}
+
+@layer components {
+  .prose code:not(pre code) {
+    @apply bg-zinc-800 px-1 py-0.5 rounded text-sm font-mono;
+  }
+  
+  .prose a {
+    @apply text-purple-400 hover:text-purple-300 transition no-underline;
+  }
+  
+  .prose blockquote {
+    @apply border-l-4 border-purple-400 pl-4 italic;
+  }
+}
