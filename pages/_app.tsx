@@ -15,6 +15,12 @@ export default function App({ Component, pageProps }: AppProps) {
           href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
+        <link rel="icon" href="/favico/favicon.ico"></link>
+        <link rel="apple-touch-icon" sizes="180x180" href="/favico/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favico/favicon-16x16.png" />
+        <link rel="manifest" href="/favico/site.webmanifest" />
+        <meta name="theme-color" content="#ffffff" />
       </Head>
       <div className="overflow-hidden">
         <AnimatePresence mode="wait">
