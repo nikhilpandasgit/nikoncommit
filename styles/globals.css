@@ -60,16 +60,6 @@ body {
   background: transparent;
 }
 
-.fixed-header {
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-  will-change: transform;
-}
-
 .fixed-header::before {
   content: '';
   position: absolute;
