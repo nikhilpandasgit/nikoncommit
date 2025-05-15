@@ -59,3 +59,22 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+.fixed-header {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+  will-change: transform;
+}
+
+.fixed-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.01);
+  pointer-events: none;
+  z-index: -1;
+}
