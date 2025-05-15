@@ -7,9 +7,23 @@ import { serialize } from 'next-mdx-remote/serialize';
 import rehypePrism from 'rehype-prism-plus';
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
 import Link from 'next/link';
+import NextImage from 'next/image';
+
 
 // Custom components for MDX
 const components = {
+  Image: (props: any) => (
+    <div className="w-full max-w-5xl mx-auto my-6">
+      <NextImage
+        {...props}
+        width={0} // Needed to bypass Next.js requirement
+        height={0} // Same here
+        sizes="100vw"
+        style={{ width: '100%', height: 'auto', objectFit: 'contain', maxHeight: 600, }}
+        className="rounded-xl"
+      />
+    </div>
+  ),
   h1: (props: any) => <h1 className="text-3xl font-bold mt-8 mb-4" {...props} />,
   h2: (props: any) => <h2 className="text-2xl font-bold mt-6 mb-3" {...props} />,
   h3: (props: any) => <h3 className="text-xl font-bold mt-5 mb-2" {...props} />,
@@ -31,21 +45,19 @@ export default function PostPage({ frontmatter, mdxSource, prevPost, nextPost }:
     <Layout title={`${frontmatter.title} | nikoncommit`}>
       <div className='max-w-5xl mx-auto'>
       <article className="mb-12">
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold mb-6">{frontmatter.title}</h1>
-          
-          {/* Moved the date and author below the title */}
-          <div className="flex flex-wrap items-center gap-3 mb-3">
-            <span className="text-sm">{frontmatter.date}</span>
-            {frontmatter.readingTime && (
-              <span className="text-gray-500 text-sm">
-                {frontmatter.readingTime} min read
-              </span>
-            )}
-          </div>
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold mb-4">{frontmatter.title}</h1>
           
           {frontmatter.excerpt && (
-            <p className="text-xl text-gray-400 mb-6">{frontmatter.excerpt}</p>
+            <p className="text-xl text-gray-400 mb-4">{frontmatter.excerpt}</p>
+          )}
+        </div>
+        <div className="flex flex-wrap items-center gap-3 mb-3">
+          <span className="text-sm">{frontmatter.date}</span>
+          {frontmatter.readingTime && (
+            <span className="text-gray-500 text-sm">
+              {frontmatter.readingTime} min read
+            </span>
           )}
         </div>
         

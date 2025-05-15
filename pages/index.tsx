@@ -42,19 +42,9 @@ export default function Home({ posts }: any) {
           </Link>
         </div>
 
-        <div className="mb-6">
-          <input
-            type="text"
-            placeholder="Search posts..."
-            className="w-full p-2 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredPosts.length > 0 ? (
-            filteredPosts.slice(0, 4).map((post: any) => (
+            filteredPosts.slice(0, 2).map((post: any) => (
               <Link href={`/blog/${post.slug}`} key={post.slug}>
                 <div className="p-6 bg-zinc-900 hover:bg-zinc-800 transition rounded-xl border border-zinc-800 h-full">
                   <div className="flex items-center mb-2">

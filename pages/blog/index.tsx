@@ -25,7 +25,7 @@ export default function Blog({ posts, categories }: any) {
       </div>
 
       <div className="mb-6">
-        <div className="flex flex-col w-full md:w-64 md:text-end ml-auto space-y-4 mb-6">
+        <div className="flex flex-col w-full md:w-96 md:text-end ml-auto space-y-4 mb-6">
           <input
             type="text"
             placeholder="Search posts..."
@@ -36,11 +36,11 @@ export default function Blog({ posts, categories }: any) {
         </div>
       </div>
 
-      <div className="space-y-8">
+      <div className="">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post: any) => (
             <Link href={`/blog/${post.slug}`} key={post.slug}>
-              <div className="p-6 bg-zinc-900 hover:bg-zinc-800 transition rounded-xl border border-zinc-800">
+              <div className="p-6 bg-zinc-900 hover:bg-zinc-800 transition rounded-xl border border-zinc-800 my-6">
                 <div className="flex flex-wrap items-center gap-3 mb-3">
                   <span className="text-gray-500 text-sm">{post.frontmatter.date}</span>
                   {post.frontmatter.readingTime && (
