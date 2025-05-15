@@ -9,7 +9,7 @@ export default function About() {
   return (
     <Layout title="nikoncommit | About">
       <div className="prose prose-invert max-w-5xl mx-auto">
-        <h1>About Me</h1>
+        <h1>About Maself</h1>
         <div className="mb-8">
           <p>
             Hey there! I'm Nik, a software developer with a passion for building things that matter.
