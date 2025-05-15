@@ -59,12 +59,3 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
-
-.fixed-header::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.01);
-  pointer-events: none;
-  z-index: -1;
-}
