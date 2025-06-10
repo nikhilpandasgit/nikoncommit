@@ -26,12 +26,8 @@ export default function Home({ posts }: any) {
 
   return (
     <Layout title="nikoncommit | Home">
-      <section className="mb-12">
+      <section className="mb-6">
         <p className="text-lg text-gray-400 mb-6">// code, thoughts & a bit of mild rebellion</p>
-        <p className="text-gray-300">
-          Welcome to my digital garden where I document my coding adventures,
-          share my thoughts on tech, and occasionally rebel against my comfortable self.
-        </p>
       </section>
 
       <section className="mb-12">
@@ -46,7 +42,7 @@ export default function Home({ posts }: any) {
           {filteredPosts.length > 0 ? (
             filteredPosts.slice(0, 2).map((post: any) => (
               <Link href={`/blog/${post.slug}`} key={post.slug}>
-                <div className="p-6 bg-zinc-900 hover:bg-zinc-800 transition rounded-xl border border-zinc-800 h-full">
+                <div className="p-6 border-2 hover:bg-zinc-800/70 rounded-3xl transition-all duration-300 border-zinc-800/80 bg-zinc-900/80  h-full backdrop-blur-sm flex flex-col justify-center">
                   <div className="flex items-center mb-2">
                     <span className="bg-purple-500 w-2 h-2 rounded-full mr-2"></span>
                     <p className="text-gray-500 text-sm">{post.frontmatter.date}</p>
@@ -59,7 +55,7 @@ export default function Home({ posts }: any) {
               </Link>
             ))
           ) : (
-            <div className="col-span-2 p-6 bg-zinc-900 rounded-xl border border-zinc-800 text-center">
+            <div className="col-span-2 p-6 bg-zinc-900 rounded-3xl border border-zinc-800 text-center">
               <p className="text-gray-400">No posts found matching your search</p>
             </div>
           )}
@@ -70,7 +66,12 @@ export default function Home({ posts }: any) {
       <h2 className="text-3xl font-bold mb-6">Featured Projects</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <div key={index} className="p-6 bg-zinc-900 rounded-xl border border-zinc-800 relative">
+          <div key={index} className="
+            p-6 border-2 rounded-3xl transition-all duration-300 
+            border-zinc-800/80 bg-zinc-900/80 
+             h-full backdrop-blur-sm relative
+            flex flex-col justify-center
+            ">
             <div className="absolute top-4 right-4">
               <StatusBadge status={project.status} />
             </div>

@@ -32,6 +32,10 @@ body {
   }
 }
 
+@theme{
+  --radius-5xl: 3rem;
+}
+
 /* Basic Scrollbar Styles */
 ::-webkit-scrollbar {
   width: 8px;

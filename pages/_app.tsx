@@ -23,17 +23,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <div className="overflow-hidden">
-        <AnimatePresence mode="wait">
           <motion.div
             key={router.asPath}
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -15 }}
-            transition={{ duration: 0.4, ease: 'easeInOut' }}
+            transition={{ duration: 0.6, ease: 'easeInOut' }}
           >
-            <Component {...pageProps} />
+            <Component {...pageProps} routeKey={router.asPath}/>
           </motion.div>
-        </AnimatePresence>
       </div>
       <Analytics />
     </>

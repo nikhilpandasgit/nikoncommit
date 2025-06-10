@@ -20,7 +20,7 @@ const components = {
         height={0} // Same here
         sizes="100vw"
         style={{ width: '100%', height: 'auto', objectFit: 'contain', maxHeight: 600, }}
-        className="rounded-xl"
+        className="rounded-2xl"
       />
     </div>
   ),
@@ -34,7 +34,7 @@ const components = {
   ),
   code: (props: any) => (
     <code 
-      className="bg-zinc-800 px-1 py-0.5 rounded text-sm font-mono" 
+      className="bg-zinc-800 px-1 py-0.5 text-sm font-mono rounded-3xl" 
       {...props} 
     />
   ),
@@ -70,7 +70,7 @@ export default function PostPage({ frontmatter, mdxSource, prevPost, nextPost }:
       <div className="flex flex-col sm:flex-row justify-between gap-4">
         {prevPost ? (
           <Link href={`/blog/${prevPost.slug}`} className="flex-1">
-            <div className="p-4 bg-zinc-900 hover:bg-zinc-800 transition rounded-xl border border-zinc-800 h-full">
+            <div className="p-4 bg-zinc-900 hover:bg-zinc-800 transition rounded-3xl border border-zinc-800 h-full">
               <p className="text-sm text-gray-500 mb-2">Previous Post</p>
               <h4 className="font-semibold">{prevPost.frontmatter.title}</h4>
             </div>
@@ -81,7 +81,7 @@ export default function PostPage({ frontmatter, mdxSource, prevPost, nextPost }:
         
         {nextPost ? (
           <Link href={`/blog/${nextPost.slug}`} className="flex-1">
-            <div className="p-4 bg-zinc-900 hover:bg-zinc-800 transition rounded-xl border border-zinc-800 text-right h-full">
+            <div className="p-4 bg-zinc-900 hover:bg-zinc-800 transition rounded-3xl border border-zinc-800 text-right h-full">
               <p className="text-sm text-gray-500 mb-2">Next Post</p>
               <h4 className="font-semibold">{nextPost.frontmatter.title}</h4>
             </div>

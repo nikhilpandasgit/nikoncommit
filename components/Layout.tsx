@@ -13,7 +13,7 @@ const navLinks = [
   { href: LINKS.ABOUT, label: "About" },
 ];
 
-export default function Layout({ children, title = SITE_TITLE }: { children: React.ReactNode, title?: string }) {
+export default function Layout({ children, title = SITE_TITLE, routeKey }: { children: React.ReactNode, title?: string,routeKey?: string }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navVariants = {
@@ -67,7 +67,7 @@ export default function Layout({ children, title = SITE_TITLE }: { children: Rea
       
       {/* Fixed the sticky header by adjusting the container structure */}
       <div className="fixed top-0 z-50 w-full py-3 px-3">
-        <header className="max-w-6xl mx-auto rounded-2xl shadow-xl border transition-all duration-300 border-zinc-800/60 bg-zinc-900/10 backdrop-blur-md">
+        <header className="max-w-6xl mx-auto rounded-3xl border-2 transition-all duration-300 border-zinc-800/50 bg-zinc-900/50 backdrop-blur-sm">
           <motion.div
             className="p-4 px-6 flex justify-between items-center"
             variants={navVariants}
@@ -120,7 +120,7 @@ export default function Layout({ children, title = SITE_TITLE }: { children: Rea
               </AnimatePresence>
             </motion.button>
 
-            <motion.nav className="hidden md:flex space-x-6 text-sm font-medium" variants={navVariants}>
+            <motion.nav className="hidden md:flex space-x-6 text-md font-medium" variants={navVariants}>
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.href}
@@ -179,7 +179,7 @@ export default function Layout({ children, title = SITE_TITLE }: { children: Rea
           className="flex-grow py-8 mt-16 transition-all duration-300"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
+          transition={{ duration: 0.5 }}
         >
           {children}
         </motion.main>

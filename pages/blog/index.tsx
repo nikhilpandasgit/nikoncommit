@@ -29,7 +29,7 @@ export default function Blog({ posts, categories }: any) {
           <input
             type="text"
             placeholder="Search posts..."
-            className="p-2 bg-zinc-900 border border-zinc-800 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-400 flex-grow"
+            className="p-3 bg-zinc-900 border border-zinc-800 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-400/20 flex-grow"
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
@@ -40,7 +40,7 @@ export default function Blog({ posts, categories }: any) {
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post: any) => (
             <Link href={`/blog/${post.slug}`} key={post.slug}>
-              <div className="p-6 bg-zinc-900 hover:bg-zinc-800 transition rounded-xl border border-zinc-800 my-6">
+              <div className="p-6 border hover:bg-zinc-800/70 rounded-3xl transition-all duration-300 border-zinc-800/80 bg-zinc-900/80 border-zinc-800 h-full backdrop-blur-sm my-6">
                 <div className="flex flex-wrap items-center gap-3 mb-3">
                   <span className="text-gray-500 text-sm">{post.frontmatter.date}</span>
                   {post.frontmatter.readingTime && (
@@ -57,7 +57,7 @@ export default function Blog({ posts, categories }: any) {
             </Link>
           ))
         ) : (
-          <div className="p-6 bg-zinc-900 rounded-xl border border-zinc-800 text-center">
+          <div className="p-6 bg-zinc-900 rounded-3xl border border-zinc-800 text-center">
             <p className="text-gray-400">No posts found matching your search</p>
           </div>
         )}

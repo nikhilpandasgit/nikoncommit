@@ -56,18 +56,6 @@ export const currentProjects = [
     description: "A chaotic but clean dev blog that reflects my projects, thoughts, and technical growth.",
     status: "in-progress" as const,
     technologies: ["Next.js", "Tailwind", "MDX", "TypeScript"]
-  },
-  {
-    title: "Chaos Circuit",
-    description: "A workout app that uses randomness and chaos to generate fun, unpredictable exercise routines.",
-    status: "in-progress" as const,
-    technologies: ["React", "Next.js", "Tailwind", "TypeScript"]
-  },
-  {
-    title: "YouOS Dashboard",
-    description: "A personal life dashboard in Google Sheets for tracking mood, habits, food, and rituals.",
-    status: "completed" as const,
-    technologies: ["Google Sheets", "Apps Script", "Notion-style Planning"]
   }
 ];
 
