@@ -120,7 +120,7 @@ export default function Layout({ children, title = SITE_TITLE, routeKey }: { chi
               </AnimatePresence>
             </motion.button>
 
-            <motion.nav className="hidden md:flex space-x-6 text-md font-medium" variants={navVariants}>
+            <motion.nav className="hidden md:flex space-x-6 text-sm pr-2 font-medium" variants={navVariants}>
               {navLinks.map((link, index) => (
                 <motion.div
                   key={link.href}

@@ -14,7 +14,7 @@ body {
   }
   
   ::selection {
-    @apply bg-purple-500 text-white;
+    @apply bg-fuchsia-800 text-white;
   }
 }
 
@@ -30,10 +30,6 @@ body {
   .prose blockquote {
     @apply border-l-4 border-purple-400 pl-4 italic;
   }
-}
-
-@theme{
-  --radius-5xl: 3rem;
 }
 
 /* Basic Scrollbar Styles */
