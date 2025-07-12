@@ -46,10 +46,10 @@ export const statusConstants = {
 
 export const currentProjects = [
   {
-    title: "Noetik",
-    description: "A Contextual Knowledge Base. A structured knowledge graph system that stores conversation data and builds evolving context.",
+    title: "Threadbrain",
+    description: "A structured knowledge graph system that stores conversation data and builds evolving context. Keeps evolving NGL 😆",
     status: "in-progress" as const,
-    technologies: ["Neo4j", "LangChain", "MCP", "TypeScript"]
+    technologies: ["Neo4j", "Flutter", "FastAPI", "NLP"]
   },
   {
     title: "nikoncommit",
@@ -62,15 +62,21 @@ export const currentProjects = [
 
 export const toolsLove = [
   "TypeScript",
+  "Angular",
   "React",
-  "Next.js",
+  "Dart",
+  "Flutter",
   "Tailwind CSS",
   "Neo4j",
   "LangChain",
-  "Vector Embeddings",
+  "FastAPI",
   "Node.js",
-  "GraphQL",
-  "Google Sheets + Apps Script"
+  "PostgreSQL",
+  "Git & GitHub",
+  "Redis",
+  "Docker",
+  "Kubernetes",
+  "Tilt"
 ]
 
 export const thingsWorking = [
