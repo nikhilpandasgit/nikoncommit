@@ -39,7 +39,7 @@ export default function Blog({ posts, categories }: any) {
       <div className="">
         {filteredPosts.length > 0 ? (
           filteredPosts.map((post: any) => (
-            <Link href={`/blog/${post.slug}`} key={post.slug}>
+            <Link href={`/blog/${post.slug}`} key={post.slug} scroll={false}>
               <div className="p-6 border hover:bg-zinc-800/70 rounded-3xl transition-all duration-300 border-zinc-800/80 bg-zinc-900/80 border-zinc-800 h-full backdrop-blur-sm my-6">
                 <div className="flex flex-wrap items-center gap-3 mb-3">
                   <span className="text-gray-500 text-sm">{post.frontmatter.date}</span>

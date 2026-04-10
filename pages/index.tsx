@@ -33,7 +33,7 @@ export default function Home({ posts }: any) {
       <section className="mb-12">
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-3xl font-bold">Recent Posts</h2>
-          <Link href="/blog" className="text-purple-400 hover:text-purple-300 transition">
+          <Link href="/blog" className="text-purple-400 hover:text-purple-300 transition" scroll={false}>
             View all →
           </Link>
         </div>
@@ -41,7 +41,7 @@ export default function Home({ posts }: any) {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {filteredPosts.length > 0 ? (
             filteredPosts.slice(0, 2).map((post: any) => (
-              <Link href={`/blog/${post.slug}`} key={post.slug}>
+              <Link href={`/blog/${post.slug}`} key={post.slug} scroll={false}>
                 <div className="p-6 border-2 hover:bg-zinc-800/70 rounded-3xl transition-all duration-300 border-zinc-800/80 bg-zinc-900/80  h-full backdrop-blur-sm flex flex-col justify-center">
                   <div className="flex items-center mb-2">
                     <span className="bg-purple-500 w-2 h-2 rounded-full mr-2"></span>

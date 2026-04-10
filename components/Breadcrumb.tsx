@@ -73,6 +73,7 @@ export default function Breadcrumb({ postTitle }: { postTitle?: string }) {
                   <Link
                     href={crumb.href}
                     className="hover:text-purple-400 transition-colors duration-200"
+                    scroll={false}
                   >
                     {crumb.label}
                   </Link>

@@ -75,7 +75,7 @@ export default function Layout({ children, title = SITE_TITLE, routeKey, postTit
             initial="hidden"
             animate="visible"
           >
-            <Link href="/" className="text-xl font-bold">
+            <Link href="/" className="text-xl font-bold" scroll={false}>
               <span className="bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent hover:from-purple-300 hover:to-pink-400 transition duration-300">
                 {SITE_TITLE}
               </span>
@@ -131,6 +131,7 @@ export default function Layout({ children, title = SITE_TITLE, routeKey, postTit
                   <Link
                     href={link.href}
                     className="relative text-white/80 hover:text-white group transition-colors duration-300"
+                    scroll={false}
                   >
                     {link.label}
                     <motion.span
@@ -164,6 +165,7 @@ export default function Layout({ children, title = SITE_TITLE, routeKey, postTit
                         href={link.href}
                         onClick={() => setIsMenuOpen(false)}
                         className="block text-white/80 hover:text-purple-400 transition pb-2 border-b border-white/5"
+                        scroll={false}
                       >
                         {link.label}
                       </Link>

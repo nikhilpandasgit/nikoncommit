@@ -69,7 +69,7 @@ export default function PostPage({ frontmatter, mdxSource, prevPost, nextPost }:
       {/* Post navigation */}
       <div className="flex flex-col sm:flex-row justify-between gap-4">
         {prevPost ? (
-          <Link href={`/blog/${prevPost.slug}`} className="flex-1">
+          <Link href={`/blog/${prevPost.slug}`} className="flex-1" scroll={false}>
             <div className="p-4 bg-zinc-900 hover:bg-zinc-800 transition rounded-3xl border border-zinc-800 h-full">
               <p className="text-sm text-gray-500 mb-2">Previous Post</p>
               <h4 className="font-semibold">{prevPost.frontmatter.title}</h4>
@@ -80,7 +80,7 @@ export default function PostPage({ frontmatter, mdxSource, prevPost, nextPost }:
         )}
         
         {nextPost ? (
-          <Link href={`/blog/${nextPost.slug}`} className="flex-1">
+          <Link href={`/blog/${nextPost.slug}`} className="flex-1" scroll={false}>
             <div className="p-4 bg-zinc-900 hover:bg-zinc-800 transition rounded-3xl border border-zinc-800 text-right h-full">
               <p className="text-sm text-gray-500 mb-2">Next Post</p>
               <h4 className="font-semibold">{nextPost.frontmatter.title}</h4>
