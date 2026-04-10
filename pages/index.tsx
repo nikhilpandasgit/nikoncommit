@@ -27,7 +27,7 @@ export default function Home({ posts }: any) {
   return (
     <Layout title="nikoncommit | Home">
       <section className="mb-6">
-        <p className="text-lg text-gray-400 mb-6">// code, thoughts & a bit of mild rebellion</p>
+        <p className="text-lg text-gray-400 mb-6">// A Journey through what I learn</p>
       </section>
 
       <section className="mb-12">

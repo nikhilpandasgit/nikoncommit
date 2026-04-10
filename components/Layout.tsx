@@ -6,6 +6,7 @@ import XIcon from "./icons/XIcon";
 import LinkedInIcon from "./icons/LinkedInIcon";
 import { SITE_TITLE, NAME, LINKS, SOCIAL_LINKS } from '../lib/constants';
 import { motion, AnimatePresence } from "framer-motion";
+import Breadcrumb from './Breadcrumb';
 
 const navLinks = [
   { href: LINKS.HOME, label: "Home" },
@@ -13,7 +14,7 @@ const navLinks = [
   { href: LINKS.ABOUT, label: "About" },
 ];
 
-export default function Layout({ children, title = SITE_TITLE, routeKey }: { children: React.ReactNode, title?: string,routeKey?: string }) {
+export default function Layout({ children, title = SITE_TITLE, routeKey, postTitle }: { children: React.ReactNode, title?: string, routeKey?: string, postTitle?: string}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navVariants = {
@@ -175,32 +176,18 @@ export default function Layout({ children, title = SITE_TITLE, routeKey }: { chi
         </header>
       </div>
       <div className="flex-grow w-full max-w-5xl mx-auto px-4">
-        <motion.main
-          className="flex-grow py-8 mt-16 transition-all duration-300"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.5 }}
-        >
+        <main className="flex-grow py-8 mt-16 transition-all duration-300">
+          <Breadcrumb postTitle={postTitle} />
           {children}
-        </motion.main>
+        </main>
       </div>
 
-      <motion.footer
-        className="mt-12 border-t border-zinc-800 bg-zinc-900/30 backdrop-blur-md shadow-inner w-full"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.3, duration: 0.5 }}
-      >
+      <footer className="mt-12 border-t border-zinc-800 bg-zinc-900/30 backdrop-blur-md shadow-inner w-full">
         <div className="max-w-5xl mx-auto p-4">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <motion.p
-              className="text-sm text-gray-400 mb-4 md:mb-0"
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4, duration: 0.3 }}
-            >
+            <p className="text-sm text-gray-400 mb-4 md:mb-0">
               Made with Love and a bit of Rebellion by {NAME} | {new Date().getFullYear()}
-            </motion.p>
+            </p>
             <div className='flex space-x-4 mt-0'>
               {[
                 { href: SOCIAL_LINKS.LINKEDIN, icon: <LinkedInIcon /> },
@@ -220,7 +207,7 @@ export default function Layout({ children, title = SITE_TITLE, routeKey }: { chi
             </div>
           </div>
         </div>
-      </motion.footer>
+      </footer>
     </div>
   );
 }

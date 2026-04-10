@@ -45,44 +45,44 @@ export const statusConstants = {
 
 
 export const currentProjects = [
-  {
-    title: "Threadbrain",
-    description: "A structured knowledge graph system that stores conversation data and builds evolving context. Keeps evolving NGL 😆",
-    status: "in-progress" as const,
-    technologies: ["Neo4j", "Flutter", "FastAPI", "NLP"]
-  },
-  {
-    title: "nikoncommit",
-    description: "A chaotic but clean dev blog that reflects my projects, thoughts, and technical growth.",
-    status: "in-progress" as const,
-    technologies: ["Next.js", "Tailwind", "MDX", "TypeScript"]
-  }
+  // {
+  //   title: "Threadbrain",
+  //   description: "A structured knowledge graph system that stores conversation data and builds evolving context. Keeps evolving NGL 😆",
+  //   status: "in-progress" as const,
+  //   technologies: ["Neo4j", "Flutter", "FastAPI", "NLP"]
+  // },
+  // {
+  //   title: "nikoncommit",
+  //   description: "A chaotic but clean dev blog that reflects my projects, thoughts, and technical growth.",
+  //   status: "in-progress" as const,
+  //   technologies: ["Next.js", "Tailwind", "MDX", "TypeScript"]
+  // }
 ];
 
 
 export const toolsLove = [
   "TypeScript",
-  "Angular",
   "React",
-  "Dart",
   "Flutter",
-  "Tailwind CSS",
-  "Neo4j",
-  "LangChain",
-  "FastAPI",
+  "Dart",
   "Node.js",
+  "Express.js",
+  "FastAPI",
   "PostgreSQL",
-  "Git & GitHub",
   "Redis",
   "Docker",
   "Kubernetes",
-  "Tilt"
+  "Minikube",
+  "AWS (Lambda, SNS)",
+  "Nginx",
+  "Git & GitHub",
+  "spaCy"
 ]
 
 export const thingsWorking = [
-  "Frontend architecture with React & Next.js",
-  "Graph-based data modeling with Neo4j",
-  "Context-aware systems and intelligent nudging",
-  "Vector embeddings & knowledge base design",
-  "Personal productivity systems & UX for mental models"
+  "Kubernetes & container orchestration (Minikube, debugging, networking)",
+  "Backend system design with Node.js & FastAPI",
+  "Distributed systems design (job scheduling, workers, fault tolerance)",
+  "Real-time systems & messaging (AWS SNS, event-driven flows)",
+  "Deployment & infra debugging (Nginx, service workers, networking)"
 ]

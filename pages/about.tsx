@@ -12,12 +12,12 @@ export default function About() {
         <h1>About Me</h1>
         <div className="mb-8">
           <p>
-            Hey there! I'm Nik, a software developer with a passion for building things that matter.
-            I created this blog to document my journey, share what I learn, and connect with like-minded people.
+            Hey, I'm Nikhil Panda. I build systems more than just apps—things that think, adapt, and don’t break easily under pressure. 
+            This blog is where I document what I’m building, breaking, and learning along the way.
           </p>
-
           <p>
-            By day, I work on Web Development and Design. By night, I explore new technologies and occasionally write about my experiences here.
+            Lately, I’ve been deep into distributed systems, Kubernetes, backend architecture, and graph + NLP-driven ideas like Threadbrain. 
+            I enjoy figuring out how complex systems behave and making them simpler to work with.
           </p>
         </div>
 

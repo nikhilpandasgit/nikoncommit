@@ -11,10 +11,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700&display=swap"
-          rel="stylesheet"
-        />
         <link rel="icon" href="/favico/favicon.ico"></link>
         <link rel="apple-touch-icon" sizes="180x180" href="/favico/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favico/favicon-32x32.png" />
@@ -23,14 +19,16 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <div className="overflow-hidden">
+        <AnimatePresence mode="wait">
           <motion.div
             key={router.asPath}
             initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: 'easeInOut' }}
           >
-            <Component {...pageProps} routeKey={router.asPath}/>
+            <Component {...pageProps} routeKey={router.asPath} />
           </motion.div>
+        </AnimatePresence>
       </div>
       <Analytics />
     </>

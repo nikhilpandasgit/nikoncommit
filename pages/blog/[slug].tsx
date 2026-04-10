@@ -42,7 +42,7 @@ const components = {
 
 export default function PostPage({ frontmatter, mdxSource, prevPost, nextPost }: any) {
   return (
-    <Layout title={`${frontmatter.title} | nikoncommit`}>
+    <Layout title={`${frontmatter.title} | nikoncommit`} postTitle={frontmatter.title}>
       <div className='max-w-5xl mx-auto'>
       <article className="mb-12">
         <div className="mb-12">
