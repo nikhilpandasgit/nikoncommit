@@ -1,0 +1,156 @@
+---
+title: "Threadbrain Devlog #1"
+date: "2025-07-12"
+excerpt: "Turns out, the way you type says more about your mood than your actual words. Threadbrain is listening."
+category: "Threadbrain Devlog"
+readingTime: "5"
+---
+
+# 🧠 Building Emotion-Aware Interfaces from Keyboard Data
+---
+
+## ✨ Why I'm Even Doing This
+
+We interact with apps like machines — clicks, taps, keystrokes.  
+But those tiny movements? They are emotional. They are **Data**.
+And most apps completely ignore them.
+
+So I’m building **Threadbrain**, a journaling-thought-mapping-AI-sidekick kinda thing, and this devlog is the first peek into the weird side of it:  
+
+**Your keyboard is a mood detector.**
+
+---
+
+## ⌨️ Keystrokes Are Emotional Data
+
+Let’s break it down.  
+When you're stressed, anxious, deep in thought, or in the zone, your typing literally changes:
+
+- You pause more  
+- You spam backspace like you're in a video game 
+- You type in short bursts, or long rants
+- You slow down when you’re unsure **(Big Brain Moments)**
+
+It’s all there. Hidden in plain text.  
+These collectively, are called **Keystroke Dynamics** — and I’m using it to make interfaces *feel* more like they’re listening.
+
+---
+
+## 🧪 What Threadbrain Does with It
+
+Threadbrain’s core idea is simple:
+
+> “Capture thoughts + sense how you’re feeling when you type them.”
+
+When you're journaling, Threadbrain tracks:
+
+- **Typing speed** (wpm-ish)  
+- **Pauses** (duration + frequency)  
+- **Backspaces per sentence**  
+- **Bursts vs. hesitation**  
+- *or* -  a **mood slider**, if you wanna self-rate  
+
+All of this gets bundled with your thoughts and piped into an **NLP Graph Pipeline**.
+
+---
+
+## 🔬 The Pipeline Looks Like This
+
+Threadbrain follows a structured flow that transforms raw input into meaningful insights:
+
+### 1. Frontend Data Capture 
+The Flutter Application handles:
+
+- Real-time typing + mood data
+
+🖐️ You type. Threadbrain listens — not just to what you say, but how.
+
+### 2. Behavioral Analytics
+Typing Metrics Collection: 
+- Keystroke rhythm, pause patterns, cognitive signals
+
+⌨️ Your typing reveals more than your words. Threadbrain tries to decode the hidden signals.
+
+### 3. Backend Processing Engine
+
+The core processing stack handles:
+- **Mood detection** 
+- **Thought parsing**
+- **Contextual linking**
+
+🧪 A processing stack built to feel things. Godd!! sounds soo cool 😆
+
+### 4. Graph Database Structure
+
+Neo4j powers the relational memory.
+- Connects emotions, people, topics, tasks
+
+🧠 Your thoughts formed a friend group. Some got drama.
+
+## Data Flow Summary
+
+```
+User Input → Typing Metrics → NLP Processing → Graph Storage → Insights
+```
+
+The result?  
+A **growing, emotional thought graph**. That’s not just storing *what* you think — but *how you felt* when you wrote it.
+
+---
+
+## 🧘 UI That Reacts to You
+
+Here’s where it gets really Interesting.
+If Threadbrain detects you’re typing under stress *(lots of pauses, high backspace, short bursts)*, it adapts:
+
+- Simplifies the UI  
+- Boosts font size + contrast
+
+Basically: *don’t overwhelm me bro, I’m barely holding on.*
+
+This is what I mean by **Emotion-aware Interfaces**.  
+UIs that **understand your energy**. No more one-size-fits-all static layouts.
+
+---
+
+## 🔮 Why This Might Actually Matter
+
+This isn’t just some “cute” feature.  
+It’s a shot at building systems that:
+
+- Understand your **emotional patterns**  
+- Help you **reflect more honestly**  
+- Support **focus and mental health**, subtly  
+
+Most journaling or productivity tools don’t really care about how you feel.  
+**Threadbrain does** - because **emotions are data**, and ignoring them is just bad design.
+
+---
+
+## 👀 What’s Next
+
+Right now, this is v0.  
+I’m refining the stress detection heuristics, adding NLP sentiment analysis, and letting the graph evolve over time.
+
+Eventually, I want Threadbrain to:
+
+- Spot burnout trends before you do
+- Connect thoughts based on emotional similarity  
+- …maybe even become a mini-therapist 🤷
+
+---
+
+## 🫡 If You’re Still Reading
+
+Appreciate you.  
+This was the first of ( **hopefully** ) many devlogs as I build this chaotic, slightly self-aware thought system.
+
+If you’ve ever:
+
+- Felt emotionally out of sync with your tools  
+- Wanted journaling to *do more*  
+- Or just like the idea of teaching your keyboard to understand you...
+
+**Hit me up. Let’s talk.**
+
+Until next commit, hope you and your thoughts are getting along, friend.
