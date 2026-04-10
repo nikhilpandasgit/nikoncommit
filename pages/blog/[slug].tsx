@@ -8,6 +8,7 @@ import rehypePrism from 'rehype-prism-plus';
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
 import Link from 'next/link';
 import NextImage from 'next/image';
+import { useEffect } from 'react';
 
 
 // Custom components for MDX
@@ -41,6 +42,9 @@ const components = {
 };
 
 export default function PostPage({ frontmatter, mdxSource, prevPost, nextPost }: any) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth'})
+  })
   return (
     <Layout title={`${frontmatter.title} | nikoncommit`} postTitle={frontmatter.title}>
       <div className='max-w-5xl mx-auto'>

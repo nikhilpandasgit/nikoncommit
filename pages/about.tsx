@@ -1,9 +1,12 @@
 import { span } from 'framer-motion/client';
 import Layout from '../components/Layout';
 import { toolsLove, thingsWorking } from '../lib/constants';
+import { useEffect } from 'react';
 
 export default function About() {
-
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth'})
+  })
   const toolsILove: string[] = toolsLove;
   const thingsIamWorkingOn:string[] = thingsWorking;
   return (

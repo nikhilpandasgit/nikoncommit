@@ -3,9 +3,12 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Blog({ posts, categories }: any) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth'})
+  })
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredPosts = posts.filter((post: any) => {

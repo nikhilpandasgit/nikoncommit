@@ -16,13 +16,7 @@ interface Project {
 
 
 export default function Home({ posts }: any) {
-  const [searchTerm, setSearchTerm] = useState('');
   const projects: Project[] = currentProjects;
-
-  const filteredPosts = posts.filter((post: any) =>
-    post.frontmatter.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    (post.frontmatter.excerpt && post.frontmatter.excerpt.toLowerCase().includes(searchTerm.toLowerCase()))
-  );
 
   return (
     <Layout title="nikoncommit | Home">
@@ -39,8 +33,8 @@ export default function Home({ posts }: any) {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {filteredPosts.length > 0 ? (
-            filteredPosts.slice(0, 2).map((post: any) => (
+          {
+            posts.slice(0, 2).map((post: any) => (
               <Link href={`/blog/${post.slug}`} key={post.slug} scroll={false}>
                 <div className="p-6 border-2 hover:bg-zinc-800/70 rounded-3xl transition-all duration-300 border-zinc-800/80 bg-zinc-900/80  h-full backdrop-blur-sm flex flex-col justify-center">
                   <div className="flex items-center mb-2">
@@ -54,11 +48,7 @@ export default function Home({ posts }: any) {
                 </div>
               </Link>
             ))
-          ) : (
-            <div className="col-span-2 p-6 bg-zinc-900 rounded-3xl border border-zinc-800 text-center">
-              <p className="text-gray-400">No posts found matching your search</p>
-            </div>
-          )}
+          }
         </div>
       </section>
 
