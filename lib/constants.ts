@@ -45,17 +45,23 @@ export const statusConstants = {
 
 
 export const currentProjects = [
+  {
+    title: 'News Aggregator',
+    description: "A lightweight, self-hosted news aggregator built for myself. Just the topics I care about, delivered to my inbox twice a day.",
+    status: 'in-progress' as const,
+    technologies: ["Python", "Github Actions"]
+  }, 
+  {
+    title: "nikoncommit",
+    description: "A chaotic but clean dev blog that reflects my projects, thoughts, and technical growth. (What you're reading this on XD)",
+    status: "in-progress" as const,
+    technologies: ["Next.js", "Tailwind", "MDX", "TypeScript"]
+  }
   // {
   //   title: "Threadbrain",
   //   description: "A structured knowledge graph system that stores conversation data and builds evolving context. Keeps evolving NGL 😆",
   //   status: "in-progress" as const,
   //   technologies: ["Neo4j", "Flutter", "FastAPI", "NLP"]
-  // },
-  // {
-  //   title: "nikoncommit",
-  //   description: "A chaotic but clean dev blog that reflects my projects, thoughts, and technical growth.",
-  //   status: "in-progress" as const,
-  //   technologies: ["Next.js", "Tailwind", "MDX", "TypeScript"]
   // }
 ];
 
