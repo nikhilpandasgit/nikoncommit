@@ -54,7 +54,7 @@ export const currentProjects = [
   {
     title: "nikoncommit",
     description: "A chaotic but clean dev blog that reflects my projects, thoughts, and technical growth. (What you're reading this on XD)",
-    status: "in-progress" as const,
+    status: "completed" as const,
     technologies: ["Next.js", "Tailwind", "MDX", "TypeScript"]
   }
   // {
